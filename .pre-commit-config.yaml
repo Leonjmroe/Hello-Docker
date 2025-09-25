@@ -18,6 +18,19 @@ repos:
         args:
           - --fix
       - id: ruff-format
+  - repo: https://github.com/charliermarsh/pyright-pre-commit-hook
+    rev: v1.1.21
+    hooks:
+      - id: pyright
+        args:
+          - --unsafe
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.2.2
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
 
 ci:
   autofix_commit_msg: 🎨 [pre-commit.ci] Auto format from pre-commit.com hooks
